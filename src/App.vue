@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Header />
+    <AddTodo />
     <!-- v-bind allows you to access the todos list as props into the todos component. -->
 
     <!-- catch the delete button emitter on app too by using v-on and add method in export default below -->
@@ -11,12 +12,14 @@
 <script>
 import Header from './components/layouts/Header'
 import Todos from './components/Todos' 
+import AddTodo from './components/AddTodo'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Todos
+    Todos,
+    AddTodo
   },
   data() {
     return {
