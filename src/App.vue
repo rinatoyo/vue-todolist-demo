@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <AddTodo />
+    <AddTodo v-on:add-todo="addTodo"/>
     <!-- v-bind allows you to access the todos list as props into the todos component. -->
 
     <!-- catch the delete button emitter on app too by using v-on and add method in export default below -->
@@ -45,6 +45,9 @@ export default {
   methods: {
     deleteTodo(id) {
       this.todos = this.todos.filter(todo => todo.id !== id);
+    },
+    addTodo(newTodo) {
+      this.todos = [...this.todos, newTodo];
     }
   }
 }
