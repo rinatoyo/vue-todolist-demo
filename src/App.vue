@@ -61,4 +61,17 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.4;
   }
+
+  .btn {
+    display: inline-block;
+    border: none;
+    background: rgb(26, 73, 161);
+    color: #fff;
+    padding: 7px 20px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background: cornflowerblue;
+  }
 </style>
